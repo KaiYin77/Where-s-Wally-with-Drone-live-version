@@ -1,8 +1,3 @@
----
-title: 'Final Project for Vehicular Vision'
-disqus: hackmd
----
-
 # Where's Wally? 
 ### A live-version game with drones and Yolov5
 
@@ -37,6 +32,7 @@ Open source our code
 Demo
 ---
 ![](https://i.imgur.com/rWjpbMr.jpg)
+
 ![youtube](https://www.youtube.com/watch?v=_jRne6oRTL4)
 
 Framework
