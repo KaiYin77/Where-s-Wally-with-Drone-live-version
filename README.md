@@ -1,13 +1,18 @@
+---
+title: 'Final Project for Vehicular Vision'
+disqus: hackmd
+---
+
 # Where's Wally? 
 ### A live-version game with drones and Yolov5
 
 Members
 ---
 
-- 0710809 侯俊宇(ECE) [Github](https://github.com/jerry8137)
-- 0710851 洪愷尹(ECE) [Github](https://github.com/KaiYin77)
+- 0710809 侯俊宇(ECE) [Github](https://github.com/KaiYin77/Where-s-Wally-with-Drone-live-version)
+- 0710851 洪愷尹(ECE) [Github](https://github.com/KaiYin77/Where-s-Wally-with-Drone-live-version)
 
-How to run
+Open source our code
 ---
 1. Environment
     ```  bash=
@@ -15,7 +20,7 @@ How to run
     ```
 2. Training stage 
     ```bash=
-    #Train custom data for Yolov5
+    #Train custom data by Yolov5
     python train.py --img 640 
                     --batch 16 
                     --epochs 20 
@@ -24,14 +29,15 @@ How to run
     ```
 3. Run Where's Wally 
     ```bash=
-    #Connect server's wifi to Drone & Run
+    #1: Connect server's wifi to drone
+    #2: python run_wally.py
     python run_wally.py
     ```
 
 Demo
 ---
 ![](https://i.imgur.com/rWjpbMr.jpg)
-
+![youtube](https://www.youtube.com/watch?v=_jRne6oRTL4)
 
 Framework
 ---
@@ -43,12 +49,14 @@ Issue
     - ISSUE
         - First label whole body not only red white stripe shirt.
         - Model performs bad → Detect human not only wally.
-        - ![Imgur](https://im5.ezgif.com/tmp/ezgif-5-984026a6ae.gif)
+        - ![](https://i.imgur.com/9mBeXRv.jpg) 
+
     - Solution
         - Re-label and focus on red-white stripe shirt!
         - Let model learn shirts’ feature specifically
         - ![](https://i.imgur.com/N9ocQ93.png)
-        - ![](https://im5.ezgif.com/tmp/ezgif-5-b260a19f37.gif)
+        - ![](https://i.imgur.com/uSI6ZBl.jpg)
+
 - 2. PID’s parameter tuning
     - ISSUE
         - There are four sets of PID’s pararmeters need to tune.
@@ -78,4 +86,5 @@ Future work
 - Long-term
     1. Build outdoor version.
     2. Combine multiple drones to find Wally.
-    3. Build interaction behavior between drones and Wally. 
+    3. Build interaction behavior between drones and Wally.
+    4. Add ability to avoid obstacles. 
